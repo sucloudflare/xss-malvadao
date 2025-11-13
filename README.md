@@ -1,6 +1,6 @@
 <h1 class="glitch">OFFSEC XSS FRAMEWORK v11.0 PHANTOM ZERO</h1>
             <div class="meta">
-                <div><strong>Autor:</strong> GhostInTheShell</div>
+                <div><strong>Autor:</strong> sucloudflare</div>
                 <div><strong>Uso exclusivo:</strong> <span class="badge">OSCP</span> <span class="badge">OSEP</span> <span class="badge">CTF</span> <span class="badge">Red Team</span> (ambientes autorizados)</div>
                 <div><strong>Última atualização:</strong> 13/11/2025</div>
             </div>
