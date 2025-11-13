@@ -128,7 +128,7 @@ cd /opt/xss</code></pre>
       <h2><i class="fas fa-play"></i> 5. Execução Passo a Passo</h2>
 
    <div class="exec">
-        <h3>Passo 1: Verifique IP</h3>
+        <h3>Passo 1: Verifique IP dentro do script em JS, bote o ip certo</h3>
         <pre><code class="language-bash">ip a | grep tun0
 # Exemplo: 10.10.14.37</code></pre>
       </div>
