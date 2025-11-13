@@ -1,3 +1,131 @@
+<h1 class="glitch">OFFSEC XSS FRAMEWORK v11.0 PHANTOM ZERO</h1>
+            <div class="meta">
+                <div><strong>Autor:</strong> GhostInTheShell</div>
+                <div><strong>Uso exclusivo:</strong> <span class="badge">OSCP</span> <span class="badge">OSEP</span> <span class="badge">CTF</span> <span class="badge">Red Team</span> (ambientes autorizados)</div>
+                <div><strong>Última atualização:</strong> 13/11/2025</div>
+            </div>
+        </header>
+
+<section>
+            <h2>O que este script faz</h2>
+            <p>
+                <strong>PHANTOM ZERO</strong> é um framework JavaScript avançado de <strong>XSS ofensivo</strong> projetado para operar em ambientes de teste de penetração com <strong>zero detecções estáticas e dinâmicas</strong>. Ele transforma uma simples vulnerabilidade XSS em uma <strong>implantação persistente, polimórfica e controlada remotamente</strong>, com capacidades de <strong>C2 (Command & Control) zero-trust</strong>, <strong>exfiltração hiper-polimórfica</strong> e <strong>evasão total de defesas modernas</strong> (WAF, EDR, AV, sandbox).
+            </p>
+        </section>
+
+ <section>
+            <h2>Principais Funcionalidades</h2>
+            <table>
+                <tr>
+                    <th>Recurso</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>200+ Payloads Polimórficos</td>
+                    <td>Geração dinâmica de variações de código via <strong>AI Mutation Engine</strong> para bypass de WAF/EDR.</td>
+                </tr>
+                <tr>
+                    <td>Exfiltração 100% Polimórfica</td>
+                    <td>5+ canais independentes (DNS, WebRTC, CSS, Beacon, postMessage) com rotação aleatória e criptografia.</td>
+                </tr>
+                <tr>
+                    <td>C2 Zero-Trust</td>
+                    <td>Conexão via WebSocket seguro + fallback DNS tunneling v2.</td>
+                </tr>
+                <tr>
+                    <td>WAF Evasion v5</td>
+                    <td>Obfuscação em tempo real, jitter, encoding múltiplo (Base64, LZString, Hex), DOM Shadow.</td>
+                </tr>
+                <tr>
+                    <td>Anti-EDR / Memory Forensics</td>
+                    <td>Execução em Shadow DOM, limpeza de rastros, auto-destruição, WASM obfuscation.</td>
+                </tr>
+                <tr>
+                    <td>AI Payload Generator</td>
+                    <td>Mutação neural de payloads com variações semânticas e sintáticas.</td>
+                </tr>
+                <tr>
+                    <td>Quantum-Resistant Crypto</td>
+                    <td>Criptografia Kyber-1024 simulado + AES-256-GCM para dados em trânsito e repouso.</td>
+                </tr>
+                <tr>
+                    <td>Persistência Nível 10</td>
+                    <td>Armazenamento em localStorage, cookies (HttpOnly+Secure), IndexedDB, Service Worker + Cache API.</td>
+                </tr>
+                <tr>
+                    <td>Coleta de Contexto</td>
+                    <td>URL, cookies, formulários, fingerprint (canvas, WebRTC, bateria), DOM, keylogging, memory.</td>
+                </tr>
+                <tr>
+                    <td>Self-Destruction</td>
+                    <td>Auto-limpeza após 1h (configurável) – apaga DOM e redireciona para <code>about:blank</code>.</td>
+                </tr>
+                <tr>
+                    <td>Anti-VM / Anti-Sandbox</td>
+                    <td>Detecta WebDriver, headless, baixa memória/CPU, bots conhecidos.</td>
+                </tr>
+                <tr>
+                    <td>DNS Tunneling v2</td>
+                    <td>Exfiltração em chunks de 50 bytes via subdomínios (63 bytes DNS-safe).</td>
+                </tr>
+                <tr>
+                    <td>WebAssembly Obfuscation</td>
+                    <td>Módulo WASM embarcado para mutação contínua de comportamento.</td>
+                </tr>
+            </table>
+        </section>
+
+ <section>
+            <h2>Como opera (fluxo interno)</h2>
+            <ol>
+                <li>Inicialização invisível em IIFE <code>(() => {})</code> com <code>'use strict'</code>.</li>
+                <li>Detecção de sandbox → aborta se detectar ambiente de análise.</li>
+                <li>Cria Shadow DOM fechado → isola execução do DOM real.</li>
+                <li>Gera ID único + fingerprint do cliente.</li>
+                <li>Criptografa e persiste dados em múltiplos storages.</li>
+                <li>Estabelece C2 via WebSocket ou DNS polling.</li>
+                <li>Coleta dados do alvo (forms, cookies, IPs locais via WebRTC, etc.).</li>
+                <li>Exfiltra via múltiplos canais aleatórios.</li>
+                <li>Escuta comandos remotos → executa código mutado via <code>new Function</code>.</li>
+                <li>Keylogger + form grabbing em background.</li>
+                <li>AI muta a si mesmo a cada 60s.</li>
+                <li>Auto-destrói após 1h.</li>
+            </ol>
+        </section>
+
+ <section>
+            <h2>Evasão Avançada</h2>
+            <ul>
+                <li>Zero assinaturas estáticas (tudo ofuscado, base64, AI-mutated).</li>
+                <li>Zero console/debug (console sobrescrito).</li>
+                <li>Zero rastros forenses (Shadow DOM, WASM, self-clean).</li>
+                <li>Jitter em todos os timers (beacons, comandos, mutação).</li>
+                <li>Fallbacks em camadas (C2 → DNS → Image beacons).</li>
+            </ul>
+        </section>
+
+ <div class="warning">
+            <strong>Aviso Legal:</strong><br>
+            Este script é <strong>exclusivamente para uso em ambientes autorizados</strong> (OSCP, OSEP, CTF, Red Team com permissão).<br>
+            <strong>Qualquer uso não autorizado é estritamente proibido.</strong>
+        </div>
+
+ <footer>
+            <p><strong>PHANTOM ZERO</strong> – 1100+ linhas. 0 detecções. 100% fantasma.</p>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <header>
       <p class="doc-type">README DEFINITIVO • FRAMEWORK XSS AVANÇADO • OFFSEC LABS</p>
