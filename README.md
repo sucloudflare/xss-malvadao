@@ -1,6 +1,7 @@
 
 <header>
       <p class="doc-type">README DEFINITIVO • FRAMEWORK XSS AVANÇADO • OFFSEC LABS</p>
+      <p>Documentação da ferramenta:<a href='https://xss-malvadao.vercel.app/'></p>
       <h1>OFFSEC XSS EXPLOIT FRAMEWORK <span style="display:block; font-size:3.2rem; margin-top:1rem; color:var(--success);">v9.99 PRO</span></h1>
       <p class="version">EXECUÇÃO • MITIGAÇÃO • DOMÍNIO TOTAL</p>
       <p class="subtitle">
