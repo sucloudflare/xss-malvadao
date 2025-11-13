@@ -3,6 +3,8 @@
         <p style="text-align:center; color:#00ff9d; font-weight:bold;">
             OFFICIAL README – COMPLETO, PROFISSIONAL E PRONTO PARA OSCP/OSWE/CTF
         </p>
+        <p>Confira a documentação do projeto: <a href="https://xss-malvadao.vercel.app/" target="_blank" rel="noopener noreferrer">xss-malvadao.vercel.app</a></p>
+
         <div class="ascii-art">
 ██████╗ ██╗  ██╗ █████╗ ███╗   ██╗████████╗ ██████╗ ███╗   ███╗
 ██╔══██╗██║  ██║██╔══██╗████╗  ██║╚══██╔══╝██╔═══██╗████╗ ████║
@@ -388,7 +390,7 @@ setTimeout(() => {
         </div>
 
  <div class="signature">
-            Autor: GhostInTheShell<br>
+            Autor: Sucloudflare<br>
             Data: 13/11/2025<br>
             Versão: 11.0.0<br>
             Licença: Uso restrito (RoE obrigatório)
