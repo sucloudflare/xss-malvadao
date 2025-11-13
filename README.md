@@ -129,8 +129,8 @@ npm install -g npx
 
  <h3>Passo 2: Baixar o Framework</h3>
             <pre>
-git clone https://github.com/ghostintheshell/phantom-zero.git
-cd phantom-zero
+git clone https://github.com/sucloudflare/xss-malvadao
+cd xss-malvadao
             </pre>
 
  <h3>Passo 3: Configurar DNS Local</h3>
@@ -252,8 +252,8 @@ phantom-zero/
  <div class="section" id="instalacao">
             <h2>7. Instalação Completa</h2>
             <pre>
-git clone https://github.com/ghostintheshell/phantom-zero.git
-cd phantom-zero
+git clone https://github.com/sucloudflare/xss-malvadao
+cd xss-malvadao
 cd c2-server && npm install && cd ..
 sudo dnsmasq --address=/phantom.local/127.0.0.1
 cd c2-server && node server.js &
